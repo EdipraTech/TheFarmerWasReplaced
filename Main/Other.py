@@ -9,8 +9,9 @@ def try_harvest():
 	while not can_harvest():
 		if get_entity_type() == None:
 			break
-		trade(Items.Fertilizer)
-		use_item(Items.Fertilizer)
+		if num_unlocked(Unlocks.Fertilizer) > 0:
+			trade(Items.Fertilizer)
+			use_item(Items.Fertilizer)
 	harvest()
 			
 def is_over(ground):

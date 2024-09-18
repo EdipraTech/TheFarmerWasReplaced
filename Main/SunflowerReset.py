@@ -1,4 +1,4 @@
-def harvest_sunflower():
+def harvest_sunflower_reset():
 	go_to_zero()
 	best_petals = 0
 	best_position = None
@@ -6,6 +6,8 @@ def harvest_sunflower():
 	position_x = []
 	position_y = []
 	petal_list = []
+	while(num_items(Items.Carrot) < get_world_size()*6 **2):
+		harvest_carrots_reset()
 	for i in range(get_world_size()):
 		for j in range(get_world_size()):
 			if get_ground_type() == Grounds.Turf:

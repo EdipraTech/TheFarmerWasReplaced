@@ -7,7 +7,8 @@ def harvest_lowest(confirm):
 		power_count = num_items(Items.Power)
 		gold_count = num_items(Items.Gold)
 		cactus_count = num_items(Items.Cactus)
-		lowest = min(hay_count, wood_count, carrot_count, pumpkin_count, power_count, gold_count, cactus_count)
+		bones_count = num_items(Items.Bones)
+		lowest = min(hay_count, wood_count, carrot_count, pumpkin_count, power_count, gold_count, cactus_count, bones_count)
 		if lowest == hay_count:
 			harvest_hay()
 		elif lowest == wood_count:
@@ -22,3 +23,5 @@ def harvest_lowest(confirm):
 			start_maze()
 		elif lowest == cactus_count:
 			harvest_cactus()
+		elif lowest == bones_count:
+			harvest_dinosaur()
